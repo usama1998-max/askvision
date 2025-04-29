@@ -33,7 +33,7 @@ async def chat(request: ChatRequest):
             model="meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo",
 
             messages=[
-                {"role": "system", "content": """Answer the question of the following user"""},
+                {"role": "system", "content": """Write a small 1 line description for the following"""},
                 {"role": "user", "content": [
                     {"type": "text", "text": request.prompt},
                     {"type": "image_url", "image_url": {"url": request.image}}
