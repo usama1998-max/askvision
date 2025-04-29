@@ -27,6 +27,7 @@ async def home():
 
 @app.post("/chat/")
 async def chat(request: ChatRequest):
+    print(request)
     try:
         response = llm.chat.completions.create(
             model="meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo",
