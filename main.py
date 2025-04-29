@@ -20,6 +20,11 @@ class ChatRequest(BaseModel):
     image: str
 
 
+@app.get("/")
+async def home():
+    return {"message": "AskVision Extention!"}
+
+
 @app.post("/chat/")
 async def chat(request: ChatRequest):
     try:
