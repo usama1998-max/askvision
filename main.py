@@ -30,7 +30,7 @@ async def chat(request: ChatRequest):
     print(request)
     try:
         response = llm.chat.completions.create(
-            model="meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo",
+            model="Qwen/Qwen2.5-VL-72B-Instruct",
 
             messages=[
                 {"role": "system", "content": """Analyze the following"""},
